@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "CountryCode";
+}
+
+<h2>CountryCode</h2>
+
+
+<head>
+    <title>International Telephone Input</title>
+    <link href="~/Views/Home/css/intlTelInput.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <h1>International Telephone Input</h1>
+    <script src="~/intl-tel-input-master/build/js/intlTelInput.js"></script>
+    <script src="~/Views/Home/js/intlTelInput.js"></script>
+    <script src="~/Views/Home/js/intlTelInput-jquery.js"></script>
+    <script src="~/js/intlTelInput.js"></script>
+    <script src="~/Views/Home/js/intlTelInput-jquery.min.js"></script>
+    <script src="~/Views/Home/js/intlTelInput.min.js"></script>
+    <script src="~/Views/Home/js/utils.js"></script>
+    <script>
+        $('#phone').intlTelInput();
+    </script>
+    <form>
+        @Html.Editor("ContactNumber", new { htmlAttributes = new { @class = "form-control" } })
+        <input id="phone" name="phone" type="tel">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
